@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'formsetfactory'%}">
+    {%csrf_token%}
+
+       {{ formset.management_form }}
+
+    {% for each in formset %}
+    {{each.as_table}}
+    <br>
+    <br>
+    {% endfor %}
+    <!--<table>{{formset}}-->
+    <!--</table>-->
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

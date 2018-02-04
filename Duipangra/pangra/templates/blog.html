@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css'%}">
+
+
+
+</head>
+<body>
+    <form id="blog-form"  method="post">
+        {% csrf_token %}
+        {{ form.as_p}}<br>
+        <!--{{form.tagline}}<br>-->
+    <input type="button" id="button" value="create">
+    </form>
+
+    <p id="para" class="text">this is paragraph in blog</p>
+    <p > this is paragraph in blog</p>
+    <img id="bike-img" src="{% static 'image/bike.jpg' %}">
+
+    <script src="{% static 'js/jscheck.js'%}">
+
+    document.write('this will not work because script file is already imported')
+
+    </script>
+
+
+</body>
+
+
+
+        <!--<script type="text/javascript">-->
+             <!--$(document).on('submit','#blog-form',function(e)-->
+             <!--{ e.preventDefault(); -->
+             <!--$.ajax({ type:'POST', url:'/blog/', -->
+             <!--data:-->
+             <!--{ name:$('#title').val()-->
+              <!--tagline:$('#tagline').val()}, -->
+              <!---->
+             <!--success.function(){ alert } });-->
+        <!--</script>-->
+    </html>
+

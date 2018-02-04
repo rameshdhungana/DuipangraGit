@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html><head> <title>jQuery goes to DOM-ville</title>
+
+<!--<script src="scripts/jquery-1.6.2.min.js"></script>-->
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery.idTabs.min.js"></script>
+
+      <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!--<link href="{% static 'css/style.css'%}" rel="stylesheet">-->
+</head>
+<body>
+<!--following is game section-->
+<div class ='game_section'>
+    <ul class="idTabs">
+    <li><input  type="button" id='play' value="click to play " style="color:blue"></li>
+        <li><input type="button" id='reset' value="Reset" style="color:red" ></li>
+        </ul>
+ </div>
+  <div class="cardbox">
+      <img id='cardimage' src=" {% static 'image/lottery.jpg'%}">
+      <div class="addition"></div>
+
+      <h1>Click on image to get lottery points </h1>
+      <p id="clickcount">Total Click :: </p>
+      <p id="result"> Your score in 5 clicks is :</p>
+  </div>
+
+
+<br><br><br><br><br>
+
+
+
+
+<!--forllowing is text move up downn section-->
+  <button id="move_up">Move Up</button>
+  <button id="move_down">Move Down</button>
+  <button id="color">Change Color</button>
+  <button id="disappear">Disappear/Re-appear</button>
+  <div id="change_me">Make Me Do Stuff!</div>
+
+  <br>
+    <img id='bike-img'src="{% static 'image/bike.jpg'%}">
+  <br>
+  <br>
+    <img id='bike-img2'src="{% static 'image/bike.jpg'%}">
+  <br>
+   <br>
+  <img id="animating" src="{%static 'image/truck_b.jpg'%}">
+
+    <img id='bike-img3'src="{% static 'image/bike.jpg'%}">
+  <br>
+   <br>
+    <img id='bike-img4'src="{% static 'image/bike.jpg'%}">
+  <br>
+  <p id="para">Hello customer
+  <input id="remove" type="button" value="Remove above paragraph">
+    </p>
+
+    <img id='scoty-img'src="{% static 'image/scoty.jpg'%}" height="200px">
+  <img id='scoty-img2'src="{% static 'image/scoty.jpg'%}" height="200px">
+  <br>
+    <img id='bike-img5'src="{% static 'image/bike.jpg'%}">
+
+  <br>
+    <input id='offer' type="hidden" value="See you offer">Click here to slideup</input>
+  <p>
+        <img class="home-img" src="{% static 'image/download.jpg'%}">
+        <img class="home-img"src="{% static 'image/download.jpg'%}">
+      <input type="button" value="Click Here to get discount" id="discount-info"> </input>
+      <span id="discount" > Your discount is  </span>
+
+  </p>
+
+
+
+  <script src="{% static 'js/jquery.js'%}">
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+{% for field in form.visible_fields %}
+    <div class="ieldWrapper"></div>
+{%if field.errors %} Error:{{field.errors}}{% endif%}<br>
+Lable:{{field.label}}<br>
+ Value:   {{field.value}}<br>
+    Html Name:{{field.html_name}}<br>
+    Id Label:{{field.id_for_label}}<br>
+    Label Tag:{{field.label_tag}}<br>
+    Help Text : {{field.help_text}}<br>
+    Test if Hidden :{{field.is_hidden }}<br>
+    Access field's attributes :{{field.field.max_length}}<br>
+
+<br>
+
+{{field}}
+<br>
+<br>
+    </div>
+{% endfor %}
+
+<input type="submit" value="click">
+    <input type="hidden" value="click">
+{% for field in form.hidden_fields %}
+Invisible fields:{{ field}}
+{% endfor %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/bikeform/" method="POST" entype="multipart/form-data">
+    {% csrf_token%}
+    {{form.as_p}}
+    <input type="file" name="bikeimage">
+    <div>hello </div>
+
+<input type="submit" value="click" name="submit">
+
+</form>
+
+</body>
+</html>

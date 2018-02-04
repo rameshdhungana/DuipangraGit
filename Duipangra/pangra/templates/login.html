@@ -1,0 +1,38 @@
+{% block content %}
+{% load i18n admin_static %}
+<form method="POST" action="/login/" >
+    {% csrf_token %}
+    <p>
+        {{user.username}}
+    {% for field in form%}
+     {{field.label_tag}}
+     {{field}}
+        <br>
+    {% if field.help_text %}
+        <small style="color: red">{{ field.help_text }}</small>
+    {% endif %}
+     {% endfor %}
+
+
+
+    </p>
+    <button  style="color:green;background:red" type="submit">Log In </button>
+
+</form>
+<!--<form action="/login/" method="POST" id="login-form">
+    {% csrf_token %}
+  {% for field in form%}
+     {{field.label_tag}}
+     {{field}}
+        <br>
+    {% if field.help_text %}
+        <small style="color: red">{{ field.help_text }}</small>
+    {% endif %}
+     {% endfor %}
+
+
+  <div class="submit-row">
+    <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}" />
+  </div>
+</form>-->
+{% endblock %}

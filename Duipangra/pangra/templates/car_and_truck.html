@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="vehicle">
+    <button id ="small_button" >Small</button>
+    <button id="medium_button" >Medium</button>
+    <button id='big_button'  >Big</button>
+    <button id='all_button' >All</button>
+
+<ul class="bus">
+    <li class="big">bus1B</li><br>
+
+    <li class="medium">bus2M</li><br>
+    <li class="small">bus3S</li><br>
+    <li>bus4</li><br>
+    <li>bus6</li><br>
+</ul>
+    <br><br>
+<ul class="car">
+    <li class="big">car1B</li><br>
+    <li class="medium">car2M</li><br>
+    <li class="small">car2S</li><br>
+    <li>car4</li><br>
+    <li>car5</li><br>
+</ul>
+    <br><br>
+<ul class="truck">
+    <li class="big">truck1B</li><br>
+    <li class="medium">truck2M</li><br>
+    <li class="small">truck1S</li><br>
+    <li>truck1</li><br>
+    <li>truck1</li><br>
+    <li>truck1</li><br>
+    <li>truck1</li><br>
+</ul>
+</div>
+
+  <script src="{% static 'js/jquery.js'%}"> </script>
+
+</body>
+</html>
+
